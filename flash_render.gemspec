@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "flash_render"
   s.version     = FlashRender::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Adam Hunter', 'Sean']
+  s.authors     = ['Adam Hunter', 'P.B.F.']
   s.email       = ['adamhunter@me.com']
   s.homepage    = "http://rubygems.org/gems/flash_render"
   s.summary     = "Updates render to use flashes like redirect_to"
-  s.description = "Inspired by 'Sean' at http://bit.ly/flash_render I use the `flash.now[:alert] and render` pattern all the time and wanted an easy way to share it with my apps."
+  s.description = "Inspired by '_P.B.F._' at http://bit.ly/flash_render I use the `flash.now[:alert] and render` pattern all the time and wanted an easy way to share it with my apps."
   s.add_dependency 'rails', '>= 2.3.8'
   s.add_development_dependency 'redgreen'
 
