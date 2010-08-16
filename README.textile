@@ -1,0 +1,6 @@
+h1. FlashRender
+
+p. Allows you to use @render :new, :alert => 'You messed up'@ just like you can use @redirect_to thang, :notice => 'You made thang successfully'@.  
+Works with @:notice@, @:alert@ and @:flash => {:message => 'Sup foo'}@ just like @redirect_to@. With rendering it sets @flash.now@ instead of @flash@.
+
+p. Inspired after googling for this feature, it was written entirely by the mysterious _Sean_ and packaged into a gem by me.  See: "http://bit.ly/flash_render":http://bit.ly/flash_render
