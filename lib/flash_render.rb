@@ -1,7 +1,5 @@
 module FlashRender
   
-  protected
-  
   def render(*args)
     options = args.extract_options!
   

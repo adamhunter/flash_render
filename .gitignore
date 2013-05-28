@@ -1,3 +1,5 @@
+.ruby-version
+.ruby-gemset
 pkg/*
 *.gem
 test/dummy/db/*.sqlite3
