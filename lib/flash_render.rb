@@ -1,6 +1,16 @@
 module FlashRender
-  
-  def render(*args)
+
+  def self.included(base)
+    # Protect from trying to augment modules that appear
+    # as the result of adding other gems.
+    return if base != ActionController::Base
+
+    base.class_eval do
+      alias_method_chain :render, :flash
+    end
+  end
+
+  def render_with_flash(*args)
     options = args.extract_options!
   
     if alert = options.delete(:alert)
@@ -18,9 +28,8 @@ module FlashRender
     end
   
     args << options
-    super(*args)
+    render_without_flash(*args)
   end
-
 end
 
 if defined?(Rails::Railtie)
