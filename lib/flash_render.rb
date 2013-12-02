@@ -3,11 +3,9 @@ module FlashRender
   def self.included(base)
     # Protect from trying to augment modules that appear
     # as the result of adding other gems.
-    return if base != ActionController::Base
+    return unless base == ActionController::Base
 
-    base.class_eval do
-      alias_method_chain :render, :flash
-    end
+    base.alias_method_chain :render, :flash
   end
 
   def render_with_flash(*args)
